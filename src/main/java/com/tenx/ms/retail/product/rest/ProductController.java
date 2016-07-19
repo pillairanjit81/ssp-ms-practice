@@ -72,7 +72,7 @@ public class ProductController {
     @RequestMapping(value = {"/store/{storeId:\\d+}"}, method = RequestMethod.GET)
     public List<Product> getStoreProducts(@ApiParam(name = "storeId", value = "The store id") @PathVariable long storeId) {
 
-        LOGGER.debug("Fetching all products for store id: {}", storeId);
+        LOGGER.debug("Pulling all products for store id: {}", storeId);
         return productService.getStoreProducts(storeId);
     }
 
